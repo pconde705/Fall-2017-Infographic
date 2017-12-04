@@ -38,7 +38,7 @@ Day 4,
 
 # Wireframe
 
-<img src="https://imgur.com/h8jSkTo">
+<img src="https://res.cloudinary.com/lopopoa2/image/upload/v1512431258/Fall_2017_Infographic_e2bc43.png">
 <br>
 
 
