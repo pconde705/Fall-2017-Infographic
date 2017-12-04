@@ -22,10 +22,27 @@ Sliders and click functions, as well as color play and zoom features will all be
 
 Sliders will be used to narrow down data to make it more specific, increasing the factors allowing for more detail in individual numbers.
 
+# Schedule
+
+Day 1,
+* Add Data To Chart Infographic
+
+Day 2,
+* Seed Data properly to construct charts, circular and line charts
+
+Day 3,
+* Create first signs of interactivity, toggles and
+
+Day 4,
+* Finalize last sliders and toggles that selects between factors like age, gender, exam results
+
+# Wireframe
+
+
+
 # Bonus
 
 If time permits,
 
 * integration with audio
 * statistics from pervious cohorts
-*
