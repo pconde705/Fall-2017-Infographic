@@ -38,7 +38,8 @@ Day 4,
 
 # Wireframe
 
-<img align="center" src="https://imgur.com/h8jSkTo"> </img> <br>
+<img src="https://imgur.com/h8jSkTo">
+<br>
 
 
 # Bonus
