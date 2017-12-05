@@ -109,3 +109,5 @@ var gender = function(obj) {
       .duration(1000);
 
 };
+
+export default gender;

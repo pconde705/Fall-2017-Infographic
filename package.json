@@ -1,0 +1,32 @@
+{
+  "name": "D3_SF_Fall_2017_Cohort",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> SF_Fall_2017_Cohort </h1> <br>",
+  "main": "pie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pconde705/SF_Fall_2017_Cohort.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pconde705/SF_Fall_2017_Cohort/issues"
+  },
+  "homepage": "https://github.com/pconde705/SF_Fall_2017_Cohort#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "d3": "^4.12.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0"
+  }
+}
