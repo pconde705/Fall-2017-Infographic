@@ -12,6 +12,8 @@ To create an interactive D3 arena, one that shows what we have been able to acco
 
 Data will come from student queries, a/A publishings and testimonials. It will cover wide topics such as professional background to technology preference.
 
+No API will be used for this project. Data has been collected internally.
+
 # Interactivity
 
 Charts will allow you to choose between multiple factors that range from gender to age as well as between student choices like whether or not to do an original projects or a  clone. In an effort to celebrate the diversity of what we do everyday at a/A it will display the many differences and similarities between each student.
