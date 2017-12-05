@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .title {
@@ -12,16 +13,15 @@
 #male {
   font-size: 90px;
   position: absolute;
-  right: 37%;
+  right: 43%;
   bottom: 44%;
-  opacity: 0.3
-
+  opacity: 0.3;
 }
 #female {
   font-size: 90px;
   position: absolute;
-  right: 54%;
-  bottom: 15%;
+  right: 72%;
+  bottom: 20%;
   opacity: 0.3
 
 }

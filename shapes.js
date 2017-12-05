@@ -76,10 +76,11 @@ var gender = function(obj) {
     .on('mouseover', function(d){
       tooltip.html(d)
         .style('left', (d3.event.pageX + 1) + 'px')
-        .style('top', (d3.event.pageX - 200) + 'px');
+        .style('bottom', (d3.event.pageX + 50) + 'px');
 
       tempColor = this.style.fill;
       d3.select(this)
+        .style("cursor", "pointer")
         .transition(500) // 500 milliseconds
         .style('opacity', 0.7)
         .style('fill', 'black');
