@@ -75,8 +75,8 @@ var gender = function(obj) {
     .attr('y', height)
     .on('mouseover', function(d){
       tooltip.html(d)
-        .style('left', (d3.event.pageX - 55) + 'px')
-        .style('top', (d3.event.pageX - 10) + 'px');
+        .style('left', (d3.event.pageX + 1) + 'px')
+        .style('top', (d3.event.pageX - 200) + 'px');
 
       tempColor = this.style.fill;
       d3.select(this)
