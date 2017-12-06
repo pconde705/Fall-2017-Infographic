@@ -21,7 +21,7 @@ var gender = function(obj) {
   var female = 0;
   var they = 0;
   var margin = { top: 0, right: 0, left: 0, bottom: 30 }
-  var width = 600 - margin.left - margin.right;
+  var width = 400 - margin.left - margin.right;
   var height = 400 - margin.top - margin.bottom;
   var tempColor;
   obj.forEach((per) => {
@@ -47,11 +47,8 @@ var gender = function(obj) {
 
   var colors = d3.scaleLinear().domain([0, d3.max(genders)]).range(['#ff9696', '#ff1e1e']);
 
-  var tooltip = d3.select('body').append('div').style('position', 'absolute')
-                  .style('padding', '0 10px').style('background', 'black')
-                  .style('color', 'white');
+  var tooltip = d3.select('body').append('div').attr("class", "toolTip");
 
-// append g groups all the elements underneath it
   var genderChart = d3.select("#gender").append('svg').attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.right + ')')
     .style('background', 'lightgrey')
@@ -74,9 +71,6 @@ var gender = function(obj) {
     // })
     .attr('y', height)
     .on('mouseover', function(d){
-      tooltip.html(d)
-        .style('left', (d3.event.pageX + 1) + 'px')
-        .style('bottom', (d3.event.pageX + 50) + 'px');
 
       tempColor = this.style.fill;
       d3.select(this)
@@ -91,7 +85,10 @@ var gender = function(obj) {
         .transition(500)
         .style('opacity', 1)
         .style('fill', tempColor);
-    });
+    })
+    .on("mousemove", function(d) {
+
+    })
 
     var yGuide = d3.select('#gender svg').append('g').attr('transform', 'translate(20, 0)')
       .call(yAxisTicks);

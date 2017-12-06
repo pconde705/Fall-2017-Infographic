@@ -10,24 +10,9 @@
   border-bottom: 1px solid lightgreen;
 }
 
-#male {
-  font-size: 90px;
+.toolTip {
   position: absolute;
-  right: 43%;
-  bottom: 44%;
-  opacity: 0.3;
-}
-#female {
-  font-size: 90px;
-  position: absolute;
-  right: 72%;
-  bottom: 20%;
-  opacity: 0.3
-
-}
-
-#gender {
-  position: absolute;
-  top: 10%;
-  left: 40%;
+  padding: 0px 10px;
+  background-color: black;
+  color: white;
 }
