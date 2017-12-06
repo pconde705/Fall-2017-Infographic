@@ -20,7 +20,7 @@ var gender = function(obj) {
   var male = 0;
   var female = 0;
   var they = 0;
-  var margin = { top: 0, right: 0, left: 0, bottom: 30 }
+  var margin = { top: 0, right: 0, left: 30, bottom: 30 }
   var width = 400 - margin.left - margin.right;
   var height = 400 - margin.top - margin.bottom;
   var tempColor;
@@ -50,7 +50,8 @@ var gender = function(obj) {
   var tooltip = d3.select('body').append('div').attr("class", "toolTip");
 
   var genderChart = d3.select("#gender").append('svg').attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.right + ')')
+    .attr("height", height + margin.top + margin.bottom)
+    .append('g').attr('transform', 'translate(' + margin.left + ',' + margin.right + ')')
     .style('background', 'lightgrey')
     .selectAll('rect').data(genders).enter().append('rect')
     .attr('fill', function(d) {
@@ -59,17 +60,22 @@ var gender = function(obj) {
     .attr('width', function(d) {
       return xScale.bandwidth();
     })
-    // .attr('height', function(d) {
-    //   return yScale(d);
-    // }) // we want to animate
-    .attr('height', 0) // for animation
+    .attr('height', 0) // reset for animation
     .attr('x', function(d, i) {
       return xScale(d);
     })
-    // .attr('y', function(d, i) {
-    //   return height - yScale(d);
-    // })
     .attr('y', height)
+    .on("mousemove", function(d) {
+      if (d === 16) {
+        tooltip.html(d).style("left", d3.event.pageX - 20 + "px")
+        .style("top", d3.event.pageY - 30 + "px").style("display", "inline-block")
+        .html("Gals: " + d);
+      } else {
+        tooltip.html(d).style("left", d3.event.pageX - 20 + "px")
+        .style("top", d3.event.pageY - 30 + "px").style("display", "inline-block")
+        .html("Guys: " + d);
+      }
+    })
     .on('mouseover', function(d){
 
       tempColor = this.style.fill;
@@ -85,9 +91,8 @@ var gender = function(obj) {
         .transition(500)
         .style('opacity', 1)
         .style('fill', tempColor);
-    })
-    .on("mousemove", function(d) {
 
+        tooltip.style("display","none");
     })
 
     var yGuide = d3.select('#gender svg').append('g').attr('transform', 'translate(20, 0)')

@@ -62,14 +62,13 @@ var circlePie = function(data) {
   var width = 500;
   var height = 400;
   var radius = Math.min(width, height) / 2;
-  var color = d3.scaleOrdinal(d3.schemeCategory20);
-  var opacity = 0.7;
+  var color = d3.scaleOrdinal(d3.schemeCategory10);
 
   var svg = d3.select("#pie").append("svg").attr("width", width).attr("height", height);
 
   var g = svg.append("g").attr("transform", 'translate(' + (width / 2) + ',' + (height / 2) + ')');
 
-  var arc = d3.arc().outerRadius(radius).innerRadius(40);
+  var arc = d3.arc().outerRadius(radius).innerRadius(0);
   // Have symbol of men and women appear inside innerRadius
 
   var circle = d3.pie().value(function(d) {
@@ -84,8 +83,7 @@ var circlePie = function(data) {
     .append('path')
     .attr('d', arc)
     .attr('fill', (d,i) => color(i))
-    .style('opacity', opacity)
-    .style('stroke', 'white')
+    .style('stroke', 'purple')
     .on("mouseover", (d) => {
 
     })

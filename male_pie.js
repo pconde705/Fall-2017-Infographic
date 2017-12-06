@@ -92,13 +92,13 @@ var malePie = function(data) {
   var height = 400;
   var radius = Math.min(width, height) / 2;
   var color = d3.scaleOrdinal(d3.schemeCategory20);
-  var opacity = 0.7;
+  var opacity = 0.9;
 
   var svg = d3.select("#male-pie").append("svg").attr("width", width).attr("height", height);
 
   var g = svg.append("g").attr("transform", 'translate(' + (width / 2) + ',' + (height / 2) + ')');
 
-  var arc = d3.arc().outerRadius(radius).innerRadius(40);
+  var arc = d3.arc().outerRadius(radius).innerRadius(150);
   // Have symbol of men and women appear inside innerRadius
 
   var circle = d3.pie().value(function(d) {
