@@ -76,6 +76,7 @@ var circlePie = function(data) {
     return d.value;
   }).sort(null);
 
+
   var path = g.selectAll('path')
     .data(circle(femaleData))
     .enter()
@@ -86,13 +87,10 @@ var circlePie = function(data) {
     .style('opacity', opacity)
     .style('stroke', 'white')
     .on("mouseover", (d) => {
-      d3.selectAll('path').style("opacity", 0.7);
-      d3.select(this).style("opacity", 1);
 
-      var gg = d3.select("svg").style("cursor", "pointer").append("g")
-                 .attr("class", "tooltip").style("opacity", 0);
+    })
+    .on("mouseout", (d) => {
 
-      gg.append("text").text(`${d.femaleData.age}: ${d.femaleData.value}`).attr('text-anchor', 'middle');
     })
 };
 

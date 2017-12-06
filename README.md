@@ -2,7 +2,7 @@
 <h1 align="center"> The Infographic of Class 'Fall 2017' </h1> <br>
 
 # Background
-The a/A roster of students for the Fall 2017 cohort is a diverse group of students that hail from many geographic and academic backgrounds that have come together to study web development. Using as my primary source of data the class of San Francisco Fall 2017, I will construct a visual infographic that chronicles the gender ratio, as well as how many github repos each student has now that the term is coming to an end.
+The a/A roster of students for the Fall 2017 cohort is a diverse group of students that hail from many geographic and academic backgrounds that have come together to study web development. Using as my primary source of data the class of San Francisco Fall 2017, I will construct a visual infographic using primarily the D3 Javascript library, that chronicles the gender ratio, age ratio, as well as how many github repos each student has now that the term is coming to an end.
 
 # Technologies
 
@@ -27,7 +27,7 @@ No external API will be used for data collection in this project. Data has been 
 
 Users will be see multiple charts on the front page, where some will have obvious overhead titles, whereas others you will need to mouseover to see certain effects and numbers that reveal more data.
 
-The effects will show number data as well as simple movement animations. The movement animations for some graphs will be complimented with color change and size alterations. 
+The effects will show number data as well as simple movement animations. The movement animations for some graphs will be complimented with color change and size alterations.
 
 # Schedule
 
