@@ -48,12 +48,6 @@ var bubbleChart = function(repodata) {
   .style("fill", "white");
 
 
-
-
-
-
-
-
 };
 
 export default bubbleChart;

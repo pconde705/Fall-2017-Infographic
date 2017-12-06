@@ -1,3 +1,6 @@
+body {
+  background-color: #2d3044;
+}
 .main-div {
   display: flex;
   justify-content: space-around;
@@ -5,8 +8,25 @@
   flex-wrap: wrap;
 }
 
-.title {
+.header-div {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
 
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 63px;
+  margin-top: -10px;
+  color: white;
+}
+
+.subtitle {
+  font-family: 'Amatic SC', cursive;
+  color: white;
+  font-size: 70px;
 }
 
 .toolTip {
@@ -18,4 +38,16 @@
 
 .img-logo {
   width: 33%;
+}
+
+.ticks line{
+  stroke: red;
+}
+
+.ticks path{
+  stroke: red;
+}
+
+.ticks text{
+  fill: red;
 }

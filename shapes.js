@@ -95,7 +95,7 @@ var gender = function(obj) {
         tooltip.style("display","none");
     })
 
-    var yGuide = d3.select('#gender svg').append('g').attr('transform', 'translate(20, 0)')
+    var yGuide = d3.select('#gender svg').append('g').attr("class", "ticks").attr('transform', 'translate(20, 0)')
       .call(yAxisTicks);
 
     genderChart.transition()
