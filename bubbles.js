@@ -37,6 +37,9 @@ var bubbleChart = function(repodata) {
   var node = svg.selectAll('.node').data(root.children).enter().append('g').attr('class', 'node').attr('transform', function(d) {
     return 'translate(' + d.x + ' ' + d.y + ')';
   })
+  .on("mouseover", (d) => {
+    
+  });
 
   node.append("circle").attr("r", function(d) { return d.r; }).style("fill", function(d) {
     return color(d.data.students);

@@ -26,7 +26,15 @@ body {
 .subtitle {
   font-family: 'Amatic SC', cursive;
   color: white;
-  font-size: 70px;
+  font-size: 100px;
+  margin-right: 70px;
+  margin-top: -30px;
+  animation-name: switcher;
+  animation-duration: 4s;
+}
+
+@keyframes switcher {
+  color: yellow;
 }
 
 .toolTip {
