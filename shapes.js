@@ -80,14 +80,14 @@ var gender = function(obj) {
       tempColor = this.style.fill;
       d3.select(this)
         .style("cursor", "pointer")
-        .transition(500) // 500 milliseconds
+        .transition(100)
         .style('opacity', 0.7)
         .style('fill', 'black');
     })
 
     .on('mouseout', function(d){
       d3.select(this)
-        .transition(500)
+        .transition(100)
         .style('opacity', 1)
         .style('fill', tempColor);
 

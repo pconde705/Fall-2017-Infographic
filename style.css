@@ -111,12 +111,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation-name: woman;
-  animation-duration: 10s;
+  animation-duration: 5s;
+  animation-direction: alternate;
   animation-iteration-count: infinite;
+  animation-play-state: running;
+
 }
 
 @keyframes woman {
-  
+  0% {transform: scale(1.5);}
+  100% {transform: scale(0.3);}
 }
 
 
