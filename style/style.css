@@ -117,11 +117,11 @@ body {
   animation-play-state: running;
 
 }
-
+/*
 @keyframes woman {
   0% {transform: scale(1.5);}
   100% {transform: scale(0.3);}
-}
+}*/
 
 
 #male-pie {
@@ -139,14 +139,14 @@ body {
   -webkit-animation: rotate 12s infinite linear;
 }
 
-@-webkit-keyframes rotate {
+/*@-webkit-keyframes rotate {
 		from {
 				-webkit-transform: rotate(0deg);
 		}
 		to {
 				-webkit-transform: rotate(359deg);
 		}
-  }
+  }*/
 
   .repo-question {
     color: yellow;
@@ -186,11 +186,20 @@ body {
     z-index: -1;
   }
 
-  @-webkit-keyframes glow {
+  @keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 40px #11ff78, 0 0 70px #11ff78, 0 0 150px #11ff78;
   }
   to {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 35px #11ff78, 0 0 75px #11ff78;
   }
+}
+
+
+.bubbleToolTip {
+  position: absolute;
+  padding: 20px 30px;
+  color: green;
+  background-color: white;
+  font-size: 50px;
 }

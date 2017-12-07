@@ -553,10 +553,10 @@ module.exports = warning;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__charts_pie__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__charts_shapes__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__charts_male_pie__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__charts_bubbles__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__charts_pie__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__charts_shapes__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__charts_male_pie__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__charts_bubbles__ = __webpack_require__(19);
 
 
 
@@ -2059,7 +2059,11 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 12 */
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2168,7 +2172,7 @@ var circlePie = function(data) {
 
 
 /***/ }),
-/* 13 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2289,7 +2293,7 @@ var gender = function(obj) {
 
 
 /***/ }),
-/* 14 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2428,12 +2432,12 @@ var malePie = function(data) {
 
 
 /***/ }),
-/* 15 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 d3.csv("./data/Fall_2017_Stats.csv")
-.row(function(d) { return {students: d.Students, repos: Number(d.Repos), commits: Number(d.Commits) };})
+.row(function(d) { return {students: d.Students, repos: Number(d.Repos) };})
 .get(function(error, data) {
   data.forEach((student) => {
   });
@@ -2476,22 +2480,11 @@ var bubbleChart = function(repodata) {
     return color(d.data.students);
   })
   .on("mousemove", function(d){
-    d3.select(this)
-      .style("opacity", 0.7)
-      .style("stroke", "yellow")
-      .style("stroke-width", 10)
-      .style("stroke-dasharray", ("10,3"));
-
-    tooltip.html("This person committed " + d.data.commits + " times").style("left", d3.event.pageX - 320 + "px")
-    .style("top", d3.event.pageY - 120 + "px").style("display", "inline-block");
-  })
-  .on("mouseout", function(d){
-    tooltip.style("display","none");
-    d3.select(this)
-      .style("stroke", "none")
-      .style("opacity", 1);
+    console.log("hello");
+    console.log(d);
+    tooltip.html(d).style("left", d3.event.pageX - 20 + "px")
+    .style("top", d3.event.pageY - 100 + "px").style("display", "inline-block");
   });
-  // Do if statements that tell the persib they need to commit more, and include happy faces or frowny faces
 
   node.append("text").attr("dy", ".3em").style("text-anchor", "middle").text(function(d) {
     return d.data.repos;
