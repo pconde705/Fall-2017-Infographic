@@ -30,18 +30,27 @@ body {
   margin-right: 70px;
   margin-top: -30px;
   animation-name: switcher;
-  animation-duration: 4s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes switcher {
-  color: yellow;
+  0%   {color:red;}
+  25%  {color:yellow;}
+  50%  {color:#66ffff;}
+  75%  {color:#73ff63;}
+  100% {color:red;}
 }
 
 .toolTip {
   position: absolute;
-  padding: 0px 10px;
-  background-color: black;
+  opacity: 0.9;
+  padding: 20px 30px;
+  background-color: red;
   color: white;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-family: 'Monoton', cursive;
 }
 
 .img-logo {

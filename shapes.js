@@ -68,12 +68,12 @@ var gender = function(obj) {
     .on("mousemove", function(d) {
       if (d === 16) {
         tooltip.html(d).style("left", d3.event.pageX - 20 + "px")
-        .style("top", d3.event.pageY - 30 + "px").style("display", "inline-block")
-        .html("Gals: " + d);
+        .style("top", d3.event.pageY - 100 + "px").style("display", "inline-block")
+        .html(d + " LADIES").style("background", "#FD7C7D");
       } else {
         tooltip.html(d).style("left", d3.event.pageX - 20 + "px")
-        .style("top", d3.event.pageY - 30 + "px").style("display", "inline-block")
-        .html("Guys: " + d);
+        .style("top", d3.event.pageY - 100 + "px").style("display", "inline-block")
+        .html(d + " GENTLEMEN");
       }
     })
     .on('mouseover', function(d){
