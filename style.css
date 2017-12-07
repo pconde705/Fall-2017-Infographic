@@ -95,34 +95,10 @@ body {
 
 #female1 {
   position: absolute;
-  right: 37%;
-  top: -30%;
-  font-size: 120px;
-  color: white;
-}
-
-#female2 {
-  transform: rotate(270deg);
-  position: absolute;
-  right: 86%;
-  top: 35%;
-  font-size: 120px;
-  color: white;
-}
-
-#female3 {
-  transform: rotate(90deg);
-  position: absolute;
-  right: -10%;
-  top: 35%;
-  font-size: 120px;
-  color: white;
-}
-
-#female4 {
-  position: absolute;
-  right: 37%;
-  top: -30%;
-  font-size: 120px;
-  color: white;
+  right: 42%;
+  top: -25%;
+  font-size: 100px;
+  background: linear-gradient(330deg, #99e052 25%, #52e0e0 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
