@@ -114,7 +114,7 @@ var malePie = function(data) {
     .attr('d', arc)
     .attr('fill', (d,i) => color(i))
     .style('opacity', opacity)
-    .style('stroke', 'white')
+    .style('stroke', 'lightgreen')
     .on("mouseover", (d) => {
 
     })
