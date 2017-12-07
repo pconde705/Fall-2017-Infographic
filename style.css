@@ -46,10 +46,10 @@ body {
   position: absolute;
   opacity: 0.9;
   padding: 20px 30px;
-  background-color: red;
   color: white;
   font-size: 30px;
   letter-spacing: 1px;
+  word-spacing: 15px;
   font-family: 'Monoton', cursive;
 }
 
