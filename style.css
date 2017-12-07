@@ -182,7 +182,7 @@ body {
     animation: glow 3.5s ease-in-out infinite alternate;
     font-family: 'Press Start 2P', cursive;
     position: absolute;
-    bottom: -142%;
+    bottom: -155%;
     z-index: -1;
   }
 
