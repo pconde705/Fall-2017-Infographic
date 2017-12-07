@@ -89,6 +89,17 @@ body {
   font-weight: 900;
 }
 
+.maleToolTip {
+  position: absolute;
+  padding: 20px 30px;
+  color: white;
+  font-size: 50px;
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: 900;
+}
+
+
+
 #pie {
   position: relative
 }
@@ -102,3 +113,27 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+#male-pie {
+  position: relative
+}
+
+#male1 {
+  position: absolute;
+  right: 39%;
+  top: 24%;
+  font-size: 194px;
+  background: linear-gradient(330deg, #ff3dee 25%, #a93aff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: rotate 12s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+  }

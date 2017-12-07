@@ -105,6 +105,8 @@ var malePie = function(data) {
     return d.value;
   }).sort(null);
 
+  var tooltip = d3.select('body').append('div').attr("class", "maleToolTip");
+
 
   var path = g.selectAll('path')
     .data(circle(maleData))
@@ -115,11 +117,18 @@ var malePie = function(data) {
     .attr('fill', (d,i) => color(i))
     .style('opacity', opacity)
     .style('stroke', 'lightgreen')
-    .on("mouseover", (d) => {
-
+    .on("mousemove", function(d) {
+      d3.selectAll('path')
+        .style("opacity", 1);
+      d3.select(this)
+        .style("opacity", 0.3);
+      tooltip.html("<strong>" + d.data.value + "</strong>" + " male: " + "<em>" + d.data.age + "</em>" + " years young!").style("left", d3.event.pageX - 20 + "px")
+      .style("top", d3.event.pageY - 200 + "px").style("left", d3.event.pageX - 240 + "px").style("display", "inline-block");
     })
     .on("mouseout", (d) => {
-
+      tooltip.style("display","none");
+      d3.selectAll('path')
+        .style("opacity", 1);
     })
 };
 
