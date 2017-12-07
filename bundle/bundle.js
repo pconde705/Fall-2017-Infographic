@@ -553,10 +553,10 @@ module.exports = warning;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pie__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shapes__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__male_pie__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bubbles__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__charts_pie__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__charts_shapes__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__charts_male_pie__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__charts_bubbles__ = __webpack_require__(19);
 
 
 
@@ -2059,11 +2059,15 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 12 */
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-d3.csv("Fall_2017_Stats.csv")
+d3.csv("./data/Fall_2017_Stats.csv")
 .row(function(d) { return { gender: d.Gender, age: Number(d.Age) };})
 .get(function(error, data) {
   data.forEach((student) => {
@@ -2168,11 +2172,11 @@ var circlePie = function(data) {
 
 
 /***/ }),
-/* 13 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// d3.csv("Fall_2017_Stats.csv")
+// d3.csv("./data/Fall_2017_Stats.csv")
 // .row(function(d) { return {students: d.Students, gender: d.Gender, age: Number(d.Age), linkedIn: d.LinkedIn, repos: Number(d.Repos), fail1: d.Failed_1, fail2: d.Failed_2 };})
 // .get(function(error, data) {
 //   data.forEach((student) => {
@@ -2180,7 +2184,7 @@ var circlePie = function(data) {
 //   })
 //   gender(data)
 // });
-d3.csv("Fall_2017_Stats.csv")
+d3.csv("./data/Fall_2017_Stats.csv")
 .row(function(d) { return { gender: d.Gender };})
 .get(function(error, data) {
   data.forEach((student) => {
@@ -2289,11 +2293,11 @@ var gender = function(obj) {
 
 
 /***/ }),
-/* 14 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-d3.csv("Fall_2017_Stats.csv")
+d3.csv("./data/Fall_2017_Stats.csv")
 .row(function(d) { return { gender: d.Gender, age: Number(d.Age) };})
 .get(function(error, data) {
   data.forEach((student) => {
@@ -2428,11 +2432,11 @@ var malePie = function(data) {
 
 
 /***/ }),
-/* 15 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-d3.csv("Fall_2017_Stats.csv")
+d3.csv("./data/Fall_2017_Stats.csv")
 .row(function(d) { return {students: d.Students, repos: Number(d.Repos) };})
 .get(function(error, data) {
   data.forEach((student) => {

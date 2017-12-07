@@ -6,7 +6,7 @@ module.exports = {
   entry: "./core.jsx",
   output: {
     path: path.resolve(__dirname),
-    filename: "bundle.js"
+    filename: "./bundle/bundle.js"
   },
   devtool: 'source-map',
   resolve: {

@@ -1,4 +1,4 @@
-d3.csv("Fall_2017_Stats.csv")
+d3.csv("./data/Fall_2017_Stats.csv")
 .row(function(d) { return { gender: d.Gender, age: Number(d.Age) };})
 .get(function(error, data) {
   data.forEach((student) => {

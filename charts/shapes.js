@@ -1,4 +1,4 @@
-// d3.csv("Fall_2017_Stats.csv")
+// d3.csv("./data/Fall_2017_Stats.csv")
 // .row(function(d) { return {students: d.Students, gender: d.Gender, age: Number(d.Age), linkedIn: d.LinkedIn, repos: Number(d.Repos), fail1: d.Failed_1, fail2: d.Failed_2 };})
 // .get(function(error, data) {
 //   data.forEach((student) => {
@@ -6,7 +6,7 @@
 //   })
 //   gender(data)
 // });
-d3.csv("Fall_2017_Stats.csv")
+d3.csv("./data/Fall_2017_Stats.csv")
 .row(function(d) { return { gender: d.Gender };})
 .get(function(error, data) {
   data.forEach((student) => {
