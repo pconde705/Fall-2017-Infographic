@@ -110,7 +110,15 @@ body {
   background: linear-gradient(330deg, #99e052 25%, #52e0e0 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation-name: woman;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
+
+@keyframes woman {
+  
+}
+
 
 #male-pie {
   position: relative
