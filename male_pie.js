@@ -2,13 +2,11 @@ d3.csv("Fall_2017_Stats.csv")
 .row(function(d) { return { gender: d.Gender, age: Number(d.Age) };})
 .get(function(error, data) {
   data.forEach((student) => {
-    // console.log(student);
   });
   malePie(data);
 });
 
 var malePie = function(data) {
-  // console.log(data);
   var maleData = [];
   var twenty1 = 0;
   var twenty2 = 0;
@@ -86,7 +84,6 @@ var malePie = function(data) {
   maleData.push(data30);
   maleData.push(data31);
   maleData.push(data32);
-// console.log(maleData);
 
   var width = 500;
   var height = 400;

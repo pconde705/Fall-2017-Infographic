@@ -145,3 +145,40 @@ body {
     margin-top: 40px;
     margin-bottom: -22px;
   }
+
+  #bubbles {
+
+  }
+
+  .repo-text-div {
+  }
+  .github-text-g {
+    transform: rotate(45deg);
+    color: white;
+    font-size: 100px;
+    animation: glow 3.5s ease-in-out infinite alternate;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    bottom: -18%;
+    left: 65%;
+    z-index: -1;
+  }
+  .github-text-r {
+    transform: rotate(45deg);
+    color: white;
+    font-size: 100px;
+    animation: glow 3.5s ease-in-out infinite alternate;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    bottom: -142%;
+    z-index: -1;
+  }
+
+  @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 40px #11ff78, 0 0 70px #11ff78, 0 0 150px #11ff78;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 35px #11ff78, 0 0 75px #11ff78;
+  }
+}

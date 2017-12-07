@@ -2,13 +2,11 @@ d3.csv("Fall_2017_Stats.csv")
 .row(function(d) { return { gender: d.Gender, age: Number(d.Age) };})
 .get(function(error, data) {
   data.forEach((student) => {
-    // console.log(student);
   });
   circlePie(data);
 });
 
 var circlePie = function(data) {
-  // console.log(data);
   var femaleData = [];
   var twenty3 = 0
   var twenty4 = 0
@@ -57,7 +55,6 @@ var circlePie = function(data) {
   femaleData.push(data27);
   femaleData.push(data28);
   femaleData.push(data35);
-// console.log(femaleData);
 
   var width = 500;
   var height = 400;

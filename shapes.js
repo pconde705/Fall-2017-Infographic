@@ -2,7 +2,7 @@
 // .row(function(d) { return {students: d.Students, gender: d.Gender, age: Number(d.Age), linkedIn: d.LinkedIn, repos: Number(d.Repos), fail1: d.Failed_1, fail2: d.Failed_2 };})
 // .get(function(error, data) {
 //   data.forEach((student) => {
-//     // console.log(student);
+//
 //   })
 //   gender(data)
 // });
@@ -10,7 +10,6 @@ d3.csv("Fall_2017_Stats.csv")
 .row(function(d) { return { gender: d.Gender };})
 .get(function(error, data) {
   data.forEach((student) => {
-    // console.log(student);
   });
   gender(data);
 });
@@ -36,13 +35,13 @@ var gender = function(obj) {
   genders.push(they);
   // they/them/theirs, she/her/hers, he/him/his
 
-  var yScale = d3.scaleLinear().domain([0, d3.max(genders)]).range([0, height]);
+  var yScaleHeight = d3.scaleLinear().domain([0, d3.max(genders)]).range([0, height]);
 
   var yAxisValues = d3.scaleLinear().domain([0, d3.max(genders)]).range([height, 0]);
 
   var yAxisTicks = d3.axisLeft(yAxisValues).ticks(10);
 
-  var xScale = d3.scaleBand().domain(genders).paddingInner(.6).paddingOuter(.6)
+  var xScaleRange = d3.scaleBand().domain(genders).paddingInner(.6).paddingOuter(.6)
     .range([0, width]);
 
   var colors = d3.scaleLinear().domain([0, d3.max(genders)]).range(['#ff9696', '#ff1e1e']);
@@ -58,11 +57,11 @@ var gender = function(obj) {
       return colors(d);
     })
     .attr('width', function(d) {
-      return xScale.bandwidth();
+      return xScaleRange.bandwidth();
     })
     .attr('height', 0) // reset for animation
     .attr('x', function(d, i) {
-      return xScale(d);
+      return xScaleRange(d);
     })
     .attr('y', height)
     .on("mousemove", function(d) {
@@ -100,10 +99,10 @@ var gender = function(obj) {
 
     genderChart.transition()
       .attr('height', function(d) {
-        return yScale(d);
+        return yScaleHeight(d);
       })
       .attr('y', function(d, i) {
-        return height - yScale(d);
+        return height - yScaleHeight(d);
       })
       .delay(function(d, i) {
         return i * 20;

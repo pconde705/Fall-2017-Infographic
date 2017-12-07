@@ -2,14 +2,12 @@ d3.csv("Fall_2017_Stats.csv")
 .row(function(d) { return {students: d.Students, repos: Number(d.Repos) };})
 .get(function(error, data) {
   data.forEach((student) => {
-    // console.log(student);
   });
   bubbleChart(data);
 });
 
 var bubbleChart = function(repodata) {
   var repoNumbers = {'children' : repodata };
-  // console.log(repoNumbers);
 
   var diameter = 500;
   var color = d3.scaleOrdinal(d3.schemeCategory20c);
@@ -38,7 +36,7 @@ var bubbleChart = function(repodata) {
     return 'translate(' + d.x + ' ' + d.y + ')';
   })
   .on("mouseover", (d) => {
-    
+
   });
 
   node.append("circle").attr("r", function(d) { return d.r; }).style("fill", function(d) {
