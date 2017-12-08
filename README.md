@@ -16,5 +16,5 @@
 
 
 <p align="center">
-  <img src="https://res.cloudinary.com/lopopoa2/image/upload/v1512760696/Screen_Shot_2017-12-08_at_11.05.15_AM_nyowb0.png">
+  <img src="https://res.cloudinary.com/lopopoa2/image/upload/v1512760965/Screen_Shot_2017-12-08_at_11.05.15_AM_arylow.png">
 </p>
