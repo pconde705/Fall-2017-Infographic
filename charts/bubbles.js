@@ -102,7 +102,7 @@ var bubbleChart = function(repodata) {
         .style("stroke-dasharray", ("100,0"));
         tooltip.html("<h1>Student no. " + "<em>" + d.data.students + "</em></h1><hr><h3>" +
           d.data.repos + " github repositories</h3><hr><h4>" + d.data.commits + " commits " +
-          "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i></h4>")
+          "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i></h4>")
         .style("left", d3.event.pageX - 140 + "px")
         .style("top", d3.event.pageY - 300 + "px").style("display", "inline-block");
 
@@ -115,12 +115,10 @@ var bubbleChart = function(repodata) {
       .style("opacity", 1);
   });
 
-  node.append("text").attr("dy", ".3em").style("text-anchor", "middle").text(function(d) {
-    return d.data.repos;
+  node.append("text").style("text-anchor", "middle").text(function(d) {
+    return "?"
   })
-  .style("fill", "white");
-
-
+  .style("opacity", 0.7)
 };
 
 export default bubbleChart;

@@ -117,12 +117,6 @@ body {
   animation-play-state: running;
 
 }
-/*
-@keyframes woman {
-  0% {transform: scale(1.5);}
-  100% {transform: scale(0.3);}
-}*/
-
 
 #male-pie {
   position: relative
@@ -139,16 +133,9 @@ body {
   -webkit-animation: rotate 12s infinite linear;
 }
 
-/*@-webkit-keyframes rotate {
-		from {
-				-webkit-transform: rotate(0deg);
-		}
-		to {
-				-webkit-transform: rotate(359deg);
-		}
-  }*/
 
-  .repo-question {
+
+.repo-question {
     color: yellow;
     font-size: 50px;
     font-family: 'Bigelow Rules', cursive;
@@ -156,38 +143,7 @@ body {
     margin-left: 30px;
     margin-top: 40px;
     margin-bottom: -22px;
-  }
-
-  /*.github-text-g {
-    transform: rotate(45deg);
-    color: white;
-    font-size: 100px;
-    animation: glow 3.5s ease-in-out infinite alternate;
-    font-family: 'Press Start 2P', cursive;
-    position: absolute;
-    bottom: -18%;
-    left: 65%;
-    z-index: -1;
-  }
-  .github-text-r {
-    transform: rotate(45deg);
-    color: white;
-    font-size: 100px;
-    animation: glow 3.5s ease-in-out infinite alternate;
-    font-family: 'Press Start 2P', cursive;
-    position: absolute;
-    bottom: -155%;
-    z-index: -1;
-  }*/
-
-  /*@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 40px #11ff78, 0 0 70px #11ff78, 0 0 150px #11ff78;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 35px #11ff78, 0 0 75px #11ff78;
-  }
-}*/
+}
 
 .bubbleToolTip {
   position: absolute;
