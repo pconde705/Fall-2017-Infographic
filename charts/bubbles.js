@@ -10,7 +10,7 @@ var bubbleChart = function(repodata) {
   var repoNumbers = {'children' : repodata };
 
   var diameter = 800;
-  var color = d3.scaleOrdinal(d3.schemeCategory20c);
+  var color = d3.scaleOrdinal(d3.schemeCategory20b);
 
   var colors = d3.scaleLinear().domain([0, d3.max(repoNumbers.children, function(d) {
     return d.repos;

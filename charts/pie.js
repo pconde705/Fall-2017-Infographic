@@ -59,7 +59,7 @@ var circlePie = function(data) {
   var width = 500;
   var height = 400;
   var radius = Math.min(width, height) / 2;
-  var color = d3.scaleOrdinal(d3.schemeCategory10);
+  var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
   var svg = d3.select("#pie").append("svg").attr("width", width).attr("height", height);
 

@@ -88,7 +88,7 @@ var malePie = function(data) {
   var width = 500;
   var height = 400;
   var radius = Math.min(width, height) / 2;
-  var color = d3.scaleOrdinal(d3.schemeCategory20);
+  var color = d3.scaleOrdinal(d3.schemeSet3);
   var opacity = 0.9;
 
   var svg = d3.select("#male-pie").append("svg").attr("width", width).attr("height", height);

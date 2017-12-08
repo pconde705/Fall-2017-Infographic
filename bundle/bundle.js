@@ -2124,7 +2124,7 @@ var circlePie = function(data) {
   var width = 500;
   var height = 400;
   var radius = Math.min(width, height) / 2;
-  var color = d3.scaleOrdinal(d3.schemeCategory10);
+  var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
   var svg = d3.select("#pie").append("svg").attr("width", width).attr("height", height);
 
@@ -2383,7 +2383,7 @@ var malePie = function(data) {
   var width = 500;
   var height = 400;
   var radius = Math.min(width, height) / 2;
-  var color = d3.scaleOrdinal(d3.schemeCategory20);
+  var color = d3.scaleOrdinal(d3.schemeSet3);
   var opacity = 0.9;
 
   var svg = d3.select("#male-pie").append("svg").attr("width", width).attr("height", height);
@@ -2444,7 +2444,7 @@ var bubbleChart = function(repodata) {
   var repoNumbers = {'children' : repodata };
 
   var diameter = 800;
-  var color = d3.scaleOrdinal(d3.schemeCategory20c);
+  var color = d3.scaleOrdinal(d3.schemeCategory20b);
 
   var colors = d3.scaleLinear().domain([0, d3.max(repoNumbers.children, function(d) {
     return d.repos;
