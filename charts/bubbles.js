@@ -42,14 +42,44 @@ var bubbleChart = function(repodata) {
     return color(d.data.students);
   })
   .on("mousemove", function(d){
-    d3.select(this)
-      .style("opacity", 0.7)
-      .style("stroke", "yellow")
-      .style("stroke-width", 10)
-      .style("stroke-dasharray", ("10,3"));
+    if (d.data.commits < 100) {
+      d3.select(this)
+        .style("opacity", 0.7)
+        .style("stroke", "yellow")
+        .style("stroke-width", 10)
+        .style("stroke-dasharray", ("1,11"));
+        tooltip.html(d.data.commits + " commits " + "<i class='fa fa-frown-o' aria-hidden='true'></i>")
+        .style("left", d3.event.pageX - 180 + "px")
+        .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
 
-    tooltip.html("This person committed " + d.data.commits + " times").style("left", d3.event.pageX - 320 + "px")
-    .style("top", d3.event.pageY - 120 + "px").style("display", "inline-block");
+    } else if (d.data.commits > 100 && d.data.commits < 200) {
+      d3.select(this)
+        .style("opacity", 0.7)
+        .style("stroke", "yellow")
+        .style("stroke-width", 10)
+        .style("stroke-dasharray", ("5,10"));
+        tooltip.html(d.data.commits + " commits " + "<i class='fa fa-meh-o' aria-hidden='true'></i>")
+        .style("left", d3.event.pageX - 180 + "px")
+        .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
+
+    }
+
+
+
+
+
+
+
+
+
+    // d3.select(this)
+    //   .style("opacity", 0.7)
+    //   .style("stroke", "yellow")
+    //   .style("stroke-width", 10)
+    //   .style("stroke-dasharray", ("10,3"));
+    //
+    // tooltip.html("This person committed " + d.data.commits + " times").style("left", d3.event.pageX - 320 + "px")
+    // .style("top", d3.event.pageY - 120 + "px").style("display", "inline-block");
   })
   .on("mouseout", function(d){
     tooltip.style("display","none");
