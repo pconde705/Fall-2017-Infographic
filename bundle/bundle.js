@@ -2480,6 +2480,7 @@ var bubbleChart = function(repodata) {
       d3.select(this)
         .style("opacity", 0.7)
         .style("stroke", "yellow")
+        .style("cursor", "pointer")
         .style("stroke-width", 10)
         .style("stroke-dasharray", ("1,11"));
         tooltip.html(d.data.commits + " commits " + "<i class='fa fa-frown-o' aria-hidden='true'></i>")
@@ -2490,9 +2491,43 @@ var bubbleChart = function(repodata) {
       d3.select(this)
         .style("opacity", 0.7)
         .style("stroke", "yellow")
+        .style("cursor", "pointer")
         .style("stroke-width", 10)
         .style("stroke-dasharray", ("5,10"));
         tooltip.html(d.data.commits + " commits " + "<i class='fa fa-meh-o' aria-hidden='true'></i>")
+        .style("left", d3.event.pageX - 180 + "px")
+        .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
+
+    } else if (d.data.commits > 200 && d.data.commits < 300) {
+      d3.select(this)
+        .style("opacity", 0.7)
+        .style("stroke", "yellow")
+        .style("cursor", "pointer")
+        .style("stroke-width", 10)
+        .style("stroke-dasharray", ("10,4"));
+        tooltip.html(d.data.commits + " commits " + "<i class='fa fa-smile-o' aria-hidden='true'></i>")
+        .style("left", d3.event.pageX - 180 + "px")
+        .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
+
+    } else if (d.data.commits > 300 && d.data.commits < 400) {
+      d3.select(this)
+        .style("opacity", 0.7)
+        .style("stroke", "yellow")
+        .style("cursor", "pointer")
+        .style("stroke-width", 10)
+        .style("stroke-dasharray", ("10,1"));
+        tooltip.html(d.data.commits + " commits " + "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i>")
+        .style("left", d3.event.pageX - 180 + "px")
+        .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
+
+    } else if (d.data.commits > 400) {
+      d3.select(this)
+        .style("opacity", 0.7)
+        .style("stroke", "yellow")
+        .style("cursor", "pointer")
+        .style("stroke-width", 10)
+        .style("stroke-dasharray", ("100,0"));
+        tooltip.html(d.data.commits + " commits " + "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i>")
         .style("left", d3.event.pageX - 180 + "px")
         .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
 
