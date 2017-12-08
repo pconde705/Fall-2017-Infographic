@@ -2477,7 +2477,7 @@ var bubbleChart = function(repodata) {
   .on("mousemove", function(d){
     if (d.data.commits < 100) {
       d3.select(this)
-        .style("opacity", 0.7)
+        .style("opacity", 0.8)
         .style("stroke", "yellow")
         .style("cursor", "pointer")
         .style("stroke-width", 10)
@@ -2490,7 +2490,7 @@ var bubbleChart = function(repodata) {
 
     } else if (d.data.commits > 100 && d.data.commits < 200) {
       d3.select(this)
-        .style("opacity", 0.7)
+        .style("opacity", 0.8)
         .style("stroke", "yellow")
         .style("cursor", "pointer")
         .style("stroke-width", 10)
@@ -2503,7 +2503,7 @@ var bubbleChart = function(repodata) {
 
     } else if (d.data.commits > 200 && d.data.commits < 300) {
       d3.select(this)
-        .style("opacity", 0.7)
+        .style("opacity", 0.8)
         .style("stroke", "yellow")
         .style("cursor", "pointer")
         .style("stroke-width", 10)
@@ -2516,7 +2516,7 @@ var bubbleChart = function(repodata) {
 
     } else if (d.data.commits > 300 && d.data.commits < 400) {
       d3.select(this)
-        .style("opacity", 0.7)
+        .style("opacity", 0.8)
         .style("stroke", "yellow")
         .style("cursor", "pointer")
         .style("stroke-width", 10)
@@ -2529,7 +2529,7 @@ var bubbleChart = function(repodata) {
 
     } else if (d.data.commits > 400) {
       d3.select(this)
-        .style("opacity", 0.7)
+        .style("opacity", 0.8)
         .style("stroke", "yellow")
         .style("cursor", "pointer")
         .style("stroke-width", 10)

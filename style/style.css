@@ -133,8 +133,6 @@ body {
   -webkit-animation: rotate 12s infinite linear;
 }
 
-
-
 .repo-question {
     color: yellow;
     font-size: 50px;
@@ -156,3 +154,16 @@ body {
   font-family: 'Megrim', cursive;
 
 }
+
+#bubbles {
+  background-image: url('../images/glogo25.png');
+  background-size: contain;
+}
+/*
+
+.github-logo {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.5;
+  width: 50%;
+}*/
