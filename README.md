@@ -18,3 +18,30 @@
 <p align="center">
   <img src="https://res.cloudinary.com/lopopoa2/image/upload/v1512760965/Screen_Shot_2017-12-08_at_11.05.15_AM_arylow.png">
 </p>
+
+Scrolling over each graph will reveal a tooltip with information related to number of men and/or women who belong to a certain age group.
+
+```javascript
+var path = g.selectAll('path')
+  .data(circle(maleData))
+  .enter()
+  .append("g")
+  .append('path')
+  .attr('d', arc)
+  .attr('fill', (d,i) => color(i))
+  .style('opacity', opacity)
+  .style('stroke', 'lightgreen')
+  .on("mousemove", function(d) {
+    d3.selectAll('path')
+      .style("opacity", 1);
+    d3.select(this)
+      .style("opacity", 0.3);
+    tooltip.html("<strong>" + d.data.value + "</strong>" + " male: " + "<em>" + d.data.age + "</em>" + " years young!").style("left", d3.event.pageX - 20 + "px")
+    .style("top", d3.event.pageY - 200 + "px").style("left", d3.event.pageX - 240 + "px").style("display", "inline-block");
+  })
+  .on("mouseout", (d) => {
+    tooltip.style("display","none");
+    d3.selectAll('path')
+      .style("opacity", 1);
+  })
+  ```
