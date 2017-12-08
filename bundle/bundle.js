@@ -2241,11 +2241,11 @@ var gender = function(obj) {
     .on("mousemove", function(d) {
       if (d === 16) {
         tooltip.html(d).style("left", d3.event.pageX - 20 + "px")
-        .style("top", d3.event.pageY - 100 + "px").style("display", "inline-block")
+        .style("top", d3.event.pageY - 120 + "px").style("display", "inline-block")
         .html(d + " LADIES").style("background", "#FD7C7D");
       } else {
         tooltip.html(d).style("left", d3.event.pageX - 20 + "px")
-        .style("top", d3.event.pageY - 100 + "px").style("display", "inline-block")
+        .style("top", d3.event.pageY - 120 + "px").style("display", "inline-block")
         .html(d + " GENTLEMEN").style("background", "#FC242B");
       }
     })
@@ -2443,7 +2443,7 @@ d3.csv("./data/Fall_2017_Stats.csv")
 var bubbleChart = function(repodata) {
   var repoNumbers = {'children' : repodata };
 
-  var diameter = 500;
+  var diameter = 800;
   var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
   var colors = d3.scaleLinear().domain([0, d3.max(repoNumbers.children, function(d) {
@@ -2451,10 +2451,9 @@ var bubbleChart = function(repodata) {
   })])
   .range(['#ff1111', '#ff11eb'])
 
-  var bubble = d3.pack().size([diameter, diameter]).padding(5)
-  var margin = {left: 0, right: 0, top: 0, bottom: 0}
+  var bubble = d3.pack().size([diameter, diameter]).padding(10)
 
-  var svg = d3.select('#bubbles').append('svg').attr('viewBox', '0 0 ' + (diameter + margin.right) + ' ' + diameter)
+  var svg = d3.select('#bubbles').append('svg').attr('viewBox', '0 0 ' + diameter + ' ' + diameter)
               .attr('width', "100%").attr('height', "100%");
 
   var root = d3.hierarchy(repoNumbers).sum(function(d) {
@@ -2483,9 +2482,11 @@ var bubbleChart = function(repodata) {
         .style("cursor", "pointer")
         .style("stroke-width", 10)
         .style("stroke-dasharray", ("1,11"));
-        tooltip.html(d.data.commits + " commits " + "<i class='fa fa-frown-o' aria-hidden='true'></i>")
-        .style("left", d3.event.pageX - 180 + "px")
-        .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
+        tooltip.html("<h1>Student no. " + "<em>" + d.data.students + "</em></h1><hr><h3>" +
+          d.data.repos + " github repositories</h3><hr><h4>" + d.data.commits + " commits " +
+          "<i class='fa fa-frown-o' aria-hidden='true'></i></h4>")
+        .style("left", d3.event.pageX - 140 + "px")
+        .style("top", d3.event.pageY - 300 + "px").style("display", "inline-block");
 
     } else if (d.data.commits > 100 && d.data.commits < 200) {
       d3.select(this)
@@ -2494,9 +2495,11 @@ var bubbleChart = function(repodata) {
         .style("cursor", "pointer")
         .style("stroke-width", 10)
         .style("stroke-dasharray", ("5,10"));
-        tooltip.html(d.data.commits + " commits " + "<i class='fa fa-meh-o' aria-hidden='true'></i>")
-        .style("left", d3.event.pageX - 180 + "px")
-        .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
+        tooltip.html("<h1>Student no. " + "<em>" + d.data.students + "</em></h1><hr><h3>" +
+          d.data.repos + " github repositories</h3><hr><h4>" + d.data.commits + " commits " +
+          "<i class='fa fa-meh-o' aria-hidden='true'></i></h4>")
+        .style("left", d3.event.pageX - 140 + "px")
+        .style("top", d3.event.pageY - 300 + "px").style("display", "inline-block");
 
     } else if (d.data.commits > 200 && d.data.commits < 300) {
       d3.select(this)
@@ -2505,9 +2508,11 @@ var bubbleChart = function(repodata) {
         .style("cursor", "pointer")
         .style("stroke-width", 10)
         .style("stroke-dasharray", ("10,4"));
-        tooltip.html(d.data.commits + " commits " + "<i class='fa fa-smile-o' aria-hidden='true'></i>")
-        .style("left", d3.event.pageX - 180 + "px")
-        .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
+        tooltip.html("<h1>Student no. " + "<em>" + d.data.students + "</em></h1><hr><h3>" +
+          d.data.repos + " github repositories</h3><hr><h4>" + d.data.commits + " commits " +
+          "<i class='fa fa-smile-o' aria-hidden='true'></i></h4>")
+        .style("left", d3.event.pageX - 140 + "px")
+        .style("top", d3.event.pageY - 300 + "px").style("display", "inline-block");
 
     } else if (d.data.commits > 300 && d.data.commits < 400) {
       d3.select(this)
@@ -2516,9 +2521,11 @@ var bubbleChart = function(repodata) {
         .style("cursor", "pointer")
         .style("stroke-width", 10)
         .style("stroke-dasharray", ("10,1"));
-        tooltip.html(d.data.commits + " commits " + "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i>")
-        .style("left", d3.event.pageX - 180 + "px")
-        .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
+        tooltip.html("<h1>Student no. " + "<em>" + d.data.students + "</em></h1><hr><h3>" +
+          d.data.repos + " github repositories</h3><hr><h4>" + d.data.commits + " commits " +
+          "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i></h4>")
+        .style("left", d3.event.pageX - 140 + "px")
+        .style("top", d3.event.pageY - 300 + "px").style("display", "inline-block");
 
     } else if (d.data.commits > 400) {
       d3.select(this)
@@ -2527,28 +2534,13 @@ var bubbleChart = function(repodata) {
         .style("cursor", "pointer")
         .style("stroke-width", 10)
         .style("stroke-dasharray", ("100,0"));
-        tooltip.html(d.data.commits + " commits " + "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i>")
-        .style("left", d3.event.pageX - 180 + "px")
-        .style("top", d3.event.pageY - 160 + "px").style("display", "inline-block");
+        tooltip.html("<h1>Student no. " + "<em>" + d.data.students + "</em></h1><hr><h3>" +
+          d.data.repos + " github repositories</h3><hr><h4>" + d.data.commits + " commits " +
+          "<i class='fa fa-smile-o' aria-hidden='true'></i>" + "<i class='fa fa-smile-o' aria-hidden='true'></i></h4>")
+        .style("left", d3.event.pageX - 140 + "px")
+        .style("top", d3.event.pageY - 300 + "px").style("display", "inline-block");
 
     }
-
-
-
-
-
-
-
-
-
-    // d3.select(this)
-    //   .style("opacity", 0.7)
-    //   .style("stroke", "yellow")
-    //   .style("stroke-width", 10)
-    //   .style("stroke-dasharray", ("10,3"));
-    //
-    // tooltip.html("This person committed " + d.data.commits + " times").style("left", d3.event.pageX - 320 + "px")
-    // .style("top", d3.event.pageY - 120 + "px").style("display", "inline-block");
   })
   .on("mouseout", function(d){
     tooltip.style("display","none");
@@ -2556,7 +2548,6 @@ var bubbleChart = function(repodata) {
       .style("stroke", "none")
       .style("opacity", 1);
   });
-  // Do if statements that tell the persib they need to commit more, and include happy faces or frowny faces
 
   node.append("text").attr("dy", ".3em").style("text-anchor", "middle").text(function(d) {
     return d.data.repos;
