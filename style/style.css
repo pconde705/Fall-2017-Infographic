@@ -55,10 +55,10 @@ body {
 }
 
 .gender-question {
-  color: yellow;
+  color: white;
   font-size: 50px;
-  font-family: 'Bigelow Rules', cursive;
-  letter-spacing: 10px;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 1px;
   margin-top: -10px;
   margin-left: 30px;
   border-top: 1px solid yellow;
@@ -104,17 +104,12 @@ body {
 
 #female1 {
   position: absolute;
-  right: 42%;
-  top: -25%;
-  font-size: 100px;
-  background: linear-gradient(330deg, #99e052 25%, #52e0e0 50%);
+  right: 36%;
+  top: 24%;
+  font-size: 194px;
+  background: linear-gradient(330deg, #ff3dee 25%, #a93aff 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-name: woman;
-  animation-duration: 5s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
 
 }
 
@@ -127,17 +122,17 @@ body {
   right: 39%;
   top: 24%;
   font-size: 194px;
-  background: linear-gradient(330deg, #ff3dee 25%, #a93aff 50%);
+  background: linear-gradient(330deg, #99e052 25%, #52e0e0 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: rotate 12s infinite linear;
 }
 
 .repo-question {
-    color: yellow;
+    color: white;
     font-size: 50px;
-    font-family: 'Bigelow Rules', cursive;
-    letter-spacing: 10px;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 1px;
     margin-left: 30px;
     margin-top: 40px;
     margin-bottom: -22px;
