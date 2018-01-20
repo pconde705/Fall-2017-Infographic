@@ -89,7 +89,7 @@ var circlePie = function(data) {
       d3.select(this)
         .style("cursor", "pointer")
         .style("opacity", 0.3);
-      tooltip.html("<strong>" + d.data.value + "</strong>" + " female: " + "<em>" + d.data.age + "</em>" + " years young!").style("left", d3.event.pageX - 20 + "px")
+      tooltip.html("<strong>" + d.data.value + "</strong>" + " female: " + "<em>" + d.data.age + "</em>" + " years old!").style("left", d3.event.pageX - 20 + "px")
       .style("top", d3.event.pageY - 120 + "px").style("left", d3.event.pageX - 240 + "px").style("display", "inline-block");
     })
     .on("mouseout", (d) => {
